@@ -1,0 +1,221 @@
+@use 'vars' as *;
+@use 'mixin' as *;
+
+@media screen and (max-width: 1439px) {
+
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (min-width: 991px) {
+  .header {
+    &-bottom {
+      &__naw {
+        &:hover, &.hover {
+          color: $blue;
+          .icon {
+              opacity: 1;
+          }
+        }
+        &:hover + div {
+            display: flex;
+        }
+      }
+      &__naw, &__link {
+        &:first-child {
+            border-top: 1px solid $bg2;
+        }
+        &:hover, &.hover {
+            background: $bg2;
+            color: $blue;
+            & + .header-submenu__wrap {
+                display: flex;
+            }
+            .icon {
+                opacity: 1;
+            }
+            .icon__arr {
+                stroke: $blue;
+            }
+        }
+      }
+      &__submenu {
+        &:hover {
+          display: flex;
+        }
+      }
+    }
+    &-submenu {
+      &__naw, &__link {
+        &:hover, &.hover {
+          background: $bg2;
+          color: $blue;
+          .icon__arr {
+              stroke: $blue;
+          }
+          .icon {
+              opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .desktop {
+    display: none !important;
+  }
+  .mobile__block {
+    display: block !important;
+  }
+  .mobile__flex {
+    display: flex !important;
+  }
+
+  .header {
+    &-main {
+      margin-left: 16px;
+      margin-right: 16px;
+      &.open {
+        margin-left: 16px;
+        margin-right: 16px;
+        min-height: 100vh;
+        overflow: inherit;
+        .header-bottom {
+          height: calc(100vh - 180px);
+        }
+        .header-top__menu {
+          background: $bg2;
+          > span {
+            background: $bg2;
+            &::before, &::after {
+              background: $textDark;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+    &-language {
+      align-items: center;
+    }
+    &-top {
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      &__search {
+        width: 100%;
+      }
+      &__menu {
+        width: 48px;
+        padding: 13px;
+        > span {
+          width: 15px;
+          &::before, &::after {
+            width: 22.5px;
+          }
+        }
+      }
+    }
+    &-bottom {
+      position: relative;
+      height: 0;
+      overflow: auto;
+      > div {
+        position: absolute;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 100%;
+      }
+      &__submenu {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        padding: 0;
+      }
+      &__naw {
+        justify-content: flex-start;
+      }
+    }
+    &-submenu {
+      grid-template-columns: 1fr;
+      padding: 0;
+      min-height: calc(100vh - 180px);
+      &__wrap.active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: $white;
+      }
+      &__naw, &__link {
+        padding: 13px;
+      }
+      &__wrap {
+        padding: 0;
+        h3{
+          font-size: 16px;
+          margin-bottom: 0;
+        //   position: absolute;
+        //   top: 0;
+        //   z-index: 1;
+        //   background: $white;
+        //   max-width: calc(100vw - 32px);
+        //   width: 100%;
+        //   height: calc(100vh - 180px);
+        //   overflow: auto;
+        }
+      }
+    }
+    .header__logo {
+      height: 56px;
+      width: 56px;
+      .icon {
+        @include iconWH(29px);
+      }
+    }
+    .btn__white {
+      .icon {
+        @include iconWH(20px);
+      }
+    }
+    .mobile__prev {
+      stroke: $textDark;
+      transform: rotate(180deg);
+      margin-right: 16px;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        stroke: $blue
+      }
+    }
+  }
+
+  main {
+    padding: 215px 16px 60px;
+    gap: 14px;
+    min-height: 100vh;
+    &:before {
+      height: 365px;
+      width: 397px;
+      background-size: cover;
+      top: initial;
+      bottom: -80px;
+      right: -220px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+
+}

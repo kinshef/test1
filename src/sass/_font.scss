@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Maza';
+	src: url('/src/fonts/Maza-Regular.eot');
+	src: local('Maza'), local('Maza-Regular'),
+		url('/src/fonts/Maza-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/src/fonts/Maza-Regular.woff') format('woff'),
+		url('/src/fonts/Maza-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TenorSans';
+	src: url('/src/fonts/TenorSans-Regular.eot');
+	src: local('TenorSans'), local('TenorSans-Regular'),
+		url('/src/fonts/TenorSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/src/fonts/TenorSans-Regular.woff') format('woff'),
+		url('/src/fonts/TenorSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
