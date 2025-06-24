@@ -1,0 +1,24 @@
+{
+  "printWidth": 80,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "tabWidth": 2,
+  "semi": true,
+  "endOfLine": "auto",
+  "arrowParens": "always",
+  "trailingComma": "es5",
+  "overrides": [
+    {
+      "files": ["*.json", ".prettierrc", ".eslintrc", ".svg"],
+      "options": {
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "options": {
+        "trailingComma": "es5"
+      }
+    }
+  ]
+}
